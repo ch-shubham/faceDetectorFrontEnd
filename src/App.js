@@ -8,6 +8,7 @@ import Particles from 'react-particles-js';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
 import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
+import AboutMe from './Components/AboutMe/AboutMe';
 
 
 const initialState = {
@@ -132,7 +133,8 @@ class App extends Component {
       	<Particles className='particles' params= {particleOptions}/>
         <Navigation isSignedIn={isSignedIn} onRouteChange ={this.onRouteChange} />
         <Logo />
-        { route === 'home'
+        { 
+          route === 'home'
         ? <div>
             <Rank 
               name={this.state.user.name} 
@@ -144,8 +146,11 @@ class App extends Component {
         :(
           route === 'signin'
           ?<Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-          :<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-          )
+          :(
+          route === 'aboutme'
+           ?<AboutMe />
+           :<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>)
+          ) 
          
       }
       </div>
