@@ -10,7 +10,6 @@ import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
 import AboutMe from './Components/AboutMe/AboutMe';
 
-
 const initialState = {
       input:'',
       imageURL:'',
@@ -25,15 +24,6 @@ const initialState = {
         joined : ''
       }
 }
-
-
-
-
-
-
-
-
-
  const particleOptions = {	
  	particles: {
 		number :{
@@ -50,11 +40,7 @@ class App extends Component {
     super();
     this.state = initialState;
   }
-
-  
-
-
-  loadUser = (data) => {
+ loadUser = (data) => {
     this.setState({user: {
         id: data.id,
         name: data.name,
@@ -76,7 +62,6 @@ class App extends Component {
       bottomRow :height -  (clarifaiFace.bottom_row * height)
     }
   }
-
 
   displayFaceBox = (box) => {
    this.setState({box: box});
@@ -125,7 +110,6 @@ class App extends Component {
     this.setState({route: route});
   }
 
-
   render() {
     const { isSignedIn,imageURL,route,box } = this.state;
     return (
@@ -150,8 +134,7 @@ class App extends Component {
           route === 'aboutme'
            ?<AboutMe />
            :<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>)
-          ) 
-         
+          )          
       }
       </div>
     );
