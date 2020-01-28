@@ -4,7 +4,7 @@ import React from 'react';
 const AboutMe = () => {
 	return (
 			<div>
-				<p >Hello, my name is Shivam Rathi.And I am currently pursuing Bachelor of technology.I am a passionate Web Developer.<br/><br/></p>
+				<p >Hello, my name is Shubham Chaudhary.And I am currently pursuing Bachelor of technology in Electronics and communication department from NIT UTTARAKHAND .I am a passionate Web Developer.<br/><br/></p>
 				
 				<h3>About this WebAPP</h3>
 				<p>
